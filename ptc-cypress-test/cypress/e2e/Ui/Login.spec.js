@@ -1,37 +1,19 @@
 /// <reference types="cypress" />
 
-import CommonPage from '../../support/Common/CommonPage'
-import LoginPage from '../../support/Login/LoginPage'
+describe('US:BPTC001 Funcionalidade: Login', () => {
 
-describe('Validar login', { tags: '@demo' }, () => {
-    before(() => {
-        cy.navigate('/')
-        CommonPage.clickInMenuLogin()
-    })
+    beforeEach(() => {
+        cy.visit('login')
+    });
 
-    context('Dado que acesso a tela de login', () => {
-        it('Então devo visualizar a tela login', () => {
-            LoginPage.validateLogin()
-        })
-    })
+    it('Deve realizar login com sucesso', () => {
+        cy.login('qa.alexandrenunes@teste.com','Teste@1234')
+        cy.get('[data-test="dashboard-welcome"]').should('contain','Bem-vindo');
+        cy.get('[data-test="dashboard-welcome"]').should('contain.text','Bem-vindo');
+    });
 
-    context('Dado que realizo o login', () => {
-        it('Então insiro o CPF ou CNPJ', () => {
-            cy.fixture("user").then((data) => {
-                LoginPage.fillFieldUsername(data.cpf)
-            })
-        })
-
-        it('E clico no botão "Continuar"', () => {
-            LoginPage.clickInButtonContinueLogin()
-        })
-
-        it('E insiro a senha de acesso', () => {
-            LoginPage.fillFieldPassword(Cypress.env('password'))
-        })
-
-        it('E clico no botão "Entrar"', () => {
-            LoginPage.clickInButtonLogin()
-        })
-    })
-})
+    it('Validar mensagem de erro, ao inserir usuário e senha inválidos', () => {
+        cy.login('usuario_invalido@teste.com','Senha_invalida@1234')
+        cy.get('[data-test="alert"]').should('contain','Credenciais inválidas');
+    });
+});
