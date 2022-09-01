@@ -1,0 +1,16 @@
+[
+    {
+        "email": "qa.alexandrenunes@teste.com",
+        "senha": "Teste@1234"
+    },
+
+    {
+        "email": "alexandre@teste.com",
+        "senha": "Teste@1234"
+    },
+
+    {
+        "email": "email@teste.com",
+        "senha": "123456"
+    }
+]
