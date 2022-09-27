@@ -17,8 +17,8 @@ on:
 env:
   DEFAULT_KEY: "4ac6df73-3450-445f-a132-95d6b6425b56"
   DEFAULT_AMB: "prd"
-  DEFAULT_BROWSER: "chrome"
-  DEFAULT_GROUP: "CI"
+  DEFAULT_BROWSER: "electron"
+  DEFAULT_GROUP: "Contiuos Testing"
 
 jobs:
   cypress-run-tests:
