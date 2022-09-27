@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import profile from '../../fixtures/profile.json'
+import profile from '../../fixtures/perfil.json'
 
 describe('Testes de Criação de Perfil', () => {
     let token

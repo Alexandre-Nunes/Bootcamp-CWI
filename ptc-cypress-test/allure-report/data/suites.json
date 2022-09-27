@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Funcionalidade: Adicionar formação",
+    "children" : [ {
+      "name" : "Deve adicionar uma formação com sucesso",
+      "uid" : "4ebbd78f42fc27c5",
+      "parentUid" : "af11a98d3ac23ef49da074bc2ab260cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1664297619037,
+        "stop" : 1664297626685,
+        "duration" : 7648
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "af11a98d3ac23ef49da074bc2ab260cb"
+  } ]
+}

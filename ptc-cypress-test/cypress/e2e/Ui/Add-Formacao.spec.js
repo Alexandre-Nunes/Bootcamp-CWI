@@ -12,7 +12,7 @@ describe('Funcionalidade: Adicionar formação', () => {
     });
 
     it('Deve adicionar uma formação com sucesso', () => {
-         FormacaoPage.addFormacao()
-         FormacaoPage.excluiFormacao()
+        FormacaoPage.addFormacao()
+        FormacaoPage.excluiFormacao()
     });
 });

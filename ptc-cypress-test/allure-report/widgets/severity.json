@@ -1,0 +1,11 @@
+[ {
+  "uid" : "4ebbd78f42fc27c5",
+  "name" : "Deve adicionar uma formação com sucesso",
+  "time" : {
+    "start" : 1664297619037,
+    "stop" : 1664297626685,
+    "duration" : 7648
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

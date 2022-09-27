@@ -11,6 +11,10 @@ describe('Funcionalidade: Adicionar experiência', () => {
         })
     });
 
+    it.only('Deve adicionar uma experiência com sucesso', () => {
+        cy.log(2+2)
+    });
+
     it('Deve adicionar uma experiência com sucesso', () => {
         experienciaPage.addExperiencia()
         experienciaPage.excluiExperiencia()

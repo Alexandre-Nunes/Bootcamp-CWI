@@ -96,3 +96,17 @@ Cypress.Commands.add("cadastrarUser", () => {
         }
     })
 })
+
+import user from "../fixtures/usuarios.json"
+Cypress.Commands.add("loginApp", () => {
+    cy.request({
+        method: 'POST',
+        url: 'api/auth',
+        body: {
+            email: user[0].email,
+            password: user[0].senha
+        }
+    }).then((login) => {
+        cy.setCookie('region', 'BR-SP')
+    })
+})
